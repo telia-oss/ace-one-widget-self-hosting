@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "ace-one-widget-self-hosting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "author": "",
+  "dependencies": {
+    "@humany/utils": "^2.1.4",
+    "@humany/widget-adapters": "^2.0.20",
+    "@humany/widget-components": "^1.4.8",
+    "@humany/widget-conversation": "^2.1.21",
+    "@humany/widget-core": "^2.0.11",
+    "@humany/widget-plugins": "^2.3.7",
+    "@humany/widget-routing": "^2.0.11",
+    "@humany/widget-services": "^2.0.7",
+    "@humany/widget-types-grid": "^1.2.7",
+    "@webprovisions/bootstrapping": "^1.0.12",
+    "@webprovisions/platform": "^1.1.2"
+  },
+  "scripts": {
+    "build-prod": "npx webpack --env production --mode production --env build",
+    "build-dev": "npx webpack --env development  --mode development --env build",
+    "start": "npx webpack serve --env development  --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "babel-regenerator-runtime": "^6.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack": "^5.59.1"
+  }
+}
