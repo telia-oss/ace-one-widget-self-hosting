@@ -30,8 +30,8 @@ Distribution files will be produced in the dist folder.
 2. Change tenant name.
 
 ```diff
-- const tenantName = 'demo';
-+ const tenantName = 'telia';
+- const tenantName = 'webprovisions';
++ const tenantName = 'another-tenant';
 ```
 
 ## Adding implementation(s)
@@ -40,6 +40,6 @@ Distribution files will be produced in the dist folder.
 2. Add implementation names.
 
 ```diff
-- const implementationNames = ['clean-v5'];
-+ const implementationNames = ['clean-v5', 'another-implementation'];
+- const implementationNames = ['default'];
++ const implementationNames = ['default', 'another-implementation'];
 ```

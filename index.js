@@ -43,10 +43,10 @@ import { findAndActivateStoredWidgets } from '@telia-ace/widget-utilities';
 import 'babel-regenerator-runtime';
 
 // tenant name
-const tenantName = 'demo';
+const tenantName = 'webprovisions';
 
 // implementation names
-const implementationNames = ['clean-v5'];
+const implementationNames = ['default'];
 
 (async () => {
     // add config api extensions
