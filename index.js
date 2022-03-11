@@ -1,50 +1,46 @@
 // polyfills
 import '@babel/polyfill';
-import 'babel-regenerator-runtime';
-import { findAndActivateStoredWidgets } from '@humany/utils';
-import { DefaultContactMethodsPlugin } from '@humany/widget-adapters';
+import { DefaultContactMethodsPlugin } from '@telia-ace/knowledge-widget-adapters';
+import BreadcrumbsComponent from '@telia-ace/knowledge-widget-components-breadcrumbs';
+import ContactLinkComponent from '@telia-ace/knowledge-widget-components-contact-link';
+import ContactListComponent from '@telia-ace/knowledge-widget-components-contact-list';
+import ContactMethodComponent from '@telia-ace/knowledge-widget-components-contact-method';
+import GuideCategoryBrowserComponent from '@telia-ace/knowledge-widget-components-guide';
+import GuideCategoryDropdownComponent from '@telia-ace/knowledge-widget-components-guide-category-browser';
+import GuideCategoryListComponent from '@telia-ace/knowledge-widget-components-guide-category-dropdown';
+import GuideCategoryTreeComponent from '@telia-ace/knowledge-widget-components-guide-category-list';
+import GuideComponent from '@telia-ace/knowledge-widget-components-guide-category-tree';
+import GuideListComponent from '@telia-ace/knowledge-widget-components-guide-list';
+import NotificationListComponent from '@telia-ace/knowledge-widget-components-notification-list';
+import NotificationRowComponent from '@telia-ace/knowledge-widget-components-notification-row';
+import RelatedGuideListComponent from '@telia-ace/knowledge-widget-components-related-guide-list';
+import RelatedTagListComponent from '@telia-ace/knowledge-widget-components-related-tag-list';
+import SearchComponent from '@telia-ace/knowledge-widget-components-search';
+import SettingsComponent from '@telia-ace/knowledge-widget-components-settings';
+import TagListComponent from '@telia-ace/knowledge-widget-components-tag-list';
+import { bootstrap, Humany, loadImplementation } from '@telia-ace/knowledge-widget-core';
 import {
-    AreaComponent,
-    BackLinkComponent,
-    BreadcrumbsComponent,
-    CloseButtonComponent,
-    ContactLinkComponent,
-    ContactListComponent,
-    ContactMethodComponent,
-    CopyrightComponent,
-    EmbeddedWidgetComponent,
-    GuideCategoryBrowserComponent,
-    GuideCategoryDropdownComponent,
-    GuideCategoryListComponent,
-    GuideCategoryTreeComponent,
-    GuideComponent,
-    GuideListComponent,
-    HeaderComponent,
-    ImageLinkComponent,
-    NotFoundComponent,
-    NotificationListComponent,
-    NotificationRowComponent,
-    RelatedGuideListComponent,
-    RelatedTagListComponent,
-    SearchComponent,
-    SettingsComponent,
-    TabStopComponent,
-    TagListComponent,
-    WidgetHeaderComponent,
-} from '@humany/widget-components';
-import { ConversationComponent } from '@humany/widget-conversation';
-import { bootstrap, Humany, loadImplementation } from '@humany/widget-core';
-import {
-    AutoScrollPlugin,
     FavoritePlugin,
     LegacyResourcesPlugin,
     MiscBehaviorPlugin,
-    ModalPlugin,
-    ObserverPlugin,
-} from '@humany/widget-plugins';
-import { routingConfigurationApi } from '@humany/widget-routing';
-import { storagePolicyConfigurationApi } from '@humany/widget-services';
-import { Widget } from '@humany/widget-types-grid';
+} from '@telia-ace/knowledge-widget-plugins';
+import AreaComponent from '@telia-ace/widget-components-area';
+import BackLinkComponent from '@telia-ace/widget-components-back-link';
+import CloseButtonComponent from '@telia-ace/widget-components-close-button';
+import CopyrightComponent from '@telia-ace/widget-components-copyright';
+import EmbeddedWidgetComponent from '@telia-ace/widget-components-embedded-widget';
+import HeaderComponent from '@telia-ace/widget-components-header';
+import ImageLinkComponent from '@telia-ace/widget-components-image-link';
+import NotFoundComponent from '@telia-ace/widget-components-not-found';
+import TabStopComponent from '@telia-ace/widget-components-tab-stop';
+import WidgetHeaderComponent from '@telia-ace/widget-components-widget-header';
+import { ConversationComponent } from '@telia-ace/widget-conversation';
+import { AutoScrollPlugin, ModalPlugin, ObserverPlugin } from '@telia-ace/widget-plugins';
+import { routingConfigurationApi } from '@telia-ace/widget-routing';
+import { storagePolicyConfigurationApi } from '@telia-ace/widget-services';
+import { GridWidget } from '@telia-ace/knowledge-widget-types-grid';
+import { findAndActivateStoredWidgets } from '@telia-ace/widget-utilities';
+import 'babel-regenerator-runtime';
 
 // tenant name
 const tenantName = 'demo';
@@ -75,7 +71,7 @@ const implementationNames = ['clean-v5'];
 
         bootstrap(implementation, (config) => {
             // register widget types
-            config.types.register('@humany/grid-widget', Widget);
+            config.types.register('@humany/grid-widget', GridWidget);
 
             // register plugins
             config
