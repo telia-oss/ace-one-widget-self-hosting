@@ -1,4 +1,4 @@
-# ACE Knowledge Standalone
+# ACE Knowledge Self Hosting
 
 A standalone ACE Knowledge cloud distribution setup.
 
