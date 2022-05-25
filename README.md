@@ -9,18 +9,18 @@ Distribution files will be produced in the dist folder.
 
 ## Local development server
 
-1. `npm install`
-2. `npm run start`
+1. `yarn` or `npm install`
+2. `yarn start` or `npm run start`
 
 ## Production build
 
-1. `npm install`
-2. `npm run build-prod`
+1. `yarn` or `npm install`
+2. `yarn build-prod` or `npm run build-prod`
 
 ## Development build
 
-1. `npm install`
-2. `npm run build-dev`
+1. `yarn` or `npm install`
+2. `yarn build-dev` or `npm run build-dev`
 
 # Configuration
 
@@ -42,4 +42,14 @@ Distribution files will be produced in the dist folder.
 ```diff
 - const implementationNames = ['default'];
 + const implementationNames = ['default', 'another-implementation'];
+```
+
+## Changing widgets(s)
+
+1. Go to `public/index.html`.
+2. Change trigger link
+
+```diff
+- <a href="https://webprovisions.humany.net/self-hosting-example"/>
++ <a href="https://<my-tenant-name>.humany.net/<my-widget-name>"/>
 ```
