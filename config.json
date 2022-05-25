@@ -1,0 +1,65 @@
+{
+    "name": "default-v5",
+    "bindings": ["https://demo.humany.net"],
+    "widgets": {
+      "myWidget1": {
+        "type": "@humany/grid-widget",
+        "settings": {
+          "entry": "area",
+          "data": {
+              "projection": "https://demo.humany.net/bot-projection"
+          },
+          "breakpoints": {},
+          "routing": {},
+          "views": {},
+          "components": {
+            "area": {
+              "type": "area",
+              "children": ["conversation"],
+              "properties": {
+                "css-margin": "120px auto",
+                "css-background-color": "#F2F2F2",
+                "css-width": "600px",
+                "css-height": "700px",
+                "css-border": "1px solid #000000",
+                "css-border-radius": "10px",
+                "css-overflow": "hidden",
+                "css-display": "flex",
+                "css-flex-direction": "column"
+              },
+              "context": {
+                "cardinal": 5,
+                "fonts": {
+                  "huge": "1.4em",
+                  "medium": "1.2em",
+                  "large": "1.6em"
+                },
+                "colors": {
+                  "accent": "#FFFFFF",
+                  "link": "#990AE3",
+                  "primary": "#990AE3",
+                  "text": "#333333",
+                  "warning": "#CC0000"
+                },
+                "borderRadius": "10px",
+                "inputBorder": "1px solid #767676"
+              }
+            },
+            "conversation": {
+              "type": "conversation",
+              "properties": {
+                "inputHidden": false,
+                "inputDisabled": false,
+                "inputPlaceholder": "Write your message here...",
+                "sendButtonLabel": "Submit message",
+                "providers": ["chat.bot"],
+                "css-position": "static",
+                "css-flex": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
