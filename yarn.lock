@@ -983,6 +983,19 @@
   dependencies:
     isomorphic-fetch "^3.0.0"
 
+"@telia-ace/knowledge-widget-adapters@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-adapters/-/knowledge-widget-adapters-1.0.10.tgz#30f6d1d63b719fa97a9ffcb13f4d899e895de413"
+  integrity sha512-sPO8XwI/OaOqioI19DXb1IvLZLqMah6Pjwpbi4nco1A8DrCriEhclFmCLXCeNxKsiLE3rLH8MQyMNNR42d8I2Q==
+  dependencies:
+    "@telia-ace/knowledge-serviceclient" "^1.0.3"
+    "@telia-ace/knowledge-widget-core" "^1.0.6"
+    "@telia-ace/knowledge-widget-ui" "^1.0.7"
+    "@telia-ace/widget-forms" "^1.0.6"
+    "@telia-ace/widget-routing" "^1.0.5"
+    "@telia-ace/widget-utilities" "^1.0.1"
+    "@webprovisions/platform" "^1.1.2"
+
 "@telia-ace/knowledge-widget-adapters@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-adapters/-/knowledge-widget-adapters-1.0.7.tgz#f1e000c12cff15c824ccb59261a28f66eacda00f"
@@ -996,26 +1009,26 @@
     "@telia-ace/widget-utilities" "^1.0.1"
     "@webprovisions/platform" "^1.1.2"
 
-"@telia-ace/knowledge-widget-bot-provider@^0.0.1-alpha.38":
-  version "0.0.1-alpha.38"
-  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-bot-provider/-/knowledge-widget-bot-provider-0.0.1-alpha.38.tgz#0cb8d0433802e82952f222764d1403536d0df39e"
-  integrity sha512-b7EZ/B0DrwxE9Bh+hpLcSbocw7fbGcCWFkN1y3cbEjODLHUn1WX/F9NiLg7nfYWZJV7vGt4h1Jna7fyClQS4ig==
+"@telia-ace/knowledge-widget-bot-provider@^0.0.1-alpha.42":
+  version "0.0.1-alpha.42"
+  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-bot-provider/-/knowledge-widget-bot-provider-0.0.1-alpha.42.tgz#b80db7d1ec580319af15173342f0d3a94cda510a"
+  integrity sha512-xMurD9KBoO2XXJYGrxFORJgsM5dCY84V+Y5kPcB5Yc+tcXOuyrcLdDHI9we+xqHktzNf9sABZqVjJBq/z8MIjg==
   dependencies:
-    "@telia-ace/knowledge-widget-adapters" "^1.0.7"
-    "@telia-ace/knowledge-widget-types-grid" "^1.0.7"
+    "@telia-ace/knowledge-widget-adapters" "^1.0.10"
+    "@telia-ace/knowledge-widget-types-grid" "^1.0.10"
     "@telia-ace/knowledge-widget-ui" "^1.0.7"
-    "@telia-ace/widget-conversation" "^1.0.6"
+    "@telia-ace/widget-conversation" "^1.0.9"
     "@telia-ace/widget-forms" "^1.0.6"
     "@telia-ace/widget-services" "^1.0.4"
     "@webprovisions/bootstrapping" "^1.0.12"
     uuid "^8.3.2"
 
-"@telia-ace/knowledge-widget-callback@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-callback/-/knowledge-widget-callback-1.0.7.tgz#e35aad774c0510b9c7ad60a922ab08c2367617b4"
-  integrity sha512-baGBD0qL4BanmePROjMsvPoP9jtQ/ZWQoMpqGVGnJfi8KRHRnllgeSL/jbbCQ9mXNUk7wJ8Glb4LMnY9snuC9g==
+"@telia-ace/knowledge-widget-callback@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-callback/-/knowledge-widget-callback-1.0.10.tgz#85dd7744a38733b19a64fcb5f7cf8ef528e897f9"
+  integrity sha512-5y98gVa/yMDp+/5UApv8f+H3MCpZYw7d/00noga7kaQPfC2pQhCAjW4gJ19/28OS0+JpYPEz578ENYfdflJZyg==
   dependencies:
-    "@telia-ace/knowledge-widget-adapters" "^1.0.7"
+    "@telia-ace/knowledge-widget-adapters" "^1.0.10"
     "@telia-ace/knowledge-widget-core" "^1.0.6"
     "@telia-ace/widget-forms" "^1.0.6"
     "@webprovisions/platform" "^1.1.2"
@@ -1247,18 +1260,31 @@
     "@webprovisions/bootstrapping" "^1.0.12"
     "@webprovisions/platform" "^1.1.2"
 
-"@telia-ace/knowledge-widget-plugins@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-plugins/-/knowledge-widget-plugins-1.0.8.tgz#170be4ee046970a3264d68cdc6f7a6af1f5a1f43"
-  integrity sha512-m7Vf/81i9tfL2wTpUUmpHELqFNWGdChKBiwOmZZQVemNMgPBGw3+yXsyfwMYQ8DCU7JbVoJ7/7pLm4/BD1qI4A==
+"@telia-ace/knowledge-widget-plugins@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-plugins/-/knowledge-widget-plugins-1.0.11.tgz#ae1a17a5ec048a244b5b13360d31f1b0ad508838"
+  integrity sha512-+oeyccEzVauSJGr7RmkQH897SuboaQ6vxwKUNzYLQKys4eb0F1BEmy82AlCKsoIoIlf7q9WydiBeh4a/FSBc9Q==
   dependencies:
     "@telia-ace/knowledge-resource-loader" "^1.0.0"
-    "@telia-ace/knowledge-widget-adapters" "^1.0.7"
+    "@telia-ace/knowledge-widget-adapters" "^1.0.10"
     "@telia-ace/knowledge-widget-core" "^1.0.6"
-    "@telia-ace/knowledge-widget-types-grid" "^1.0.7"
+    "@telia-ace/knowledge-widget-types-grid" "^1.0.10"
     "@telia-ace/knowledge-widget-ui" "^1.0.7"
     "@telia-ace/widget-routing" "^1.0.5"
     "@telia-ace/widget-services" "^1.0.4"
+    "@telia-ace/widget-utilities" "^1.0.1"
+    "@webprovisions/platform" "^1.1.2"
+
+"@telia-ace/knowledge-widget-types-grid@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@telia-ace/knowledge-widget-types-grid/-/knowledge-widget-types-grid-1.0.10.tgz#1c648a4beb55561f842b1e0a345a6e1928606c33"
+  integrity sha512-FPuR+YHpw/+XTQXt0idFwLMbH2uElbXRNCNEN8Z7dFR95diLeVbhRLMNnfgLndA3srgCOl7vPDw+FiFM08GLKg==
+  dependencies:
+    "@telia-ace/knowledge-serviceclient" "^1.0.3"
+    "@telia-ace/knowledge-widget-adapters" "^1.0.10"
+    "@telia-ace/knowledge-widget-core" "^1.0.6"
+    "@telia-ace/widget-forms" "^1.0.6"
+    "@telia-ace/widget-types-grid" "^1.0.6"
     "@telia-ace/widget-utilities" "^1.0.1"
     "@webprovisions/platform" "^1.1.2"
 
@@ -1404,10 +1430,10 @@
     "@telia-ace/widget-utilities" "^1.0.1"
     "@webprovisions/platform" "^1.1.2"
 
-"@telia-ace/widget-conversation@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@telia-ace/widget-conversation/-/widget-conversation-1.0.6.tgz#90d4eb6e0fb678837fe243316fa2e66fd7c476ae"
-  integrity sha512-pNtqTYxwN431vO7XCxygnc8/Zt0gwC+vbtHp4DMi6U8hngBfUjfBW1QB/K5GYkySs03NR38oZjugv+AdKPBgwg==
+"@telia-ace/widget-conversation@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@telia-ace/widget-conversation/-/widget-conversation-1.0.9.tgz#0041a978821d71f34da084af41da9024d6bfff4b"
+  integrity sha512-LYffV89HyJ3Ibq/JULAcK3Z9vfzMQyE8bT0RjGmv/xkhLzaJkPbP2WcxhKfQoeryso2Iq6GUgSKF7DOax+Oo3w==
   dependencies:
     "@telia-ace/widget-core" "^1.0.4"
     "@telia-ace/widget-forms" "^1.0.6"

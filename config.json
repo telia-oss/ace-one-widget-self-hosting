@@ -2,64 +2,233 @@
     "name": "default-v5",
     "bindings": ["https://demo.humany.net"],
     "widgets": {
-      "myWidget1": {
-        "type": "@humany/grid-widget",
-        "settings": {
-          "entry": "area",
-          "data": {
-              "projection": "https://demo.humany.net/bot-projection"
-          },
-          "breakpoints": {},
-          "routing": {},
-          "views": {},
-          "components": {
-            "area": {
-              "type": "area",
-              "children": ["conversation"],
-              "properties": {
-                "css-margin": "120px auto",
-                "css-background-color": "#F2F2F2",
-                "css-width": "600px",
-                "css-height": "700px",
-                "css-border": "1px solid #000000",
-                "css-border-radius": "10px",
-                "css-overflow": "hidden",
-                "css-display": "flex",
-                "css-flex-direction": "column"
-              },
-              "context": {
-                "cardinal": 5,
-                "fonts": {
-                  "huge": "1.4em",
-                  "medium": "1.2em",
-                  "large": "1.6em"
+        "myWidget1": {
+            "type": "@humany/grid-widget",
+            "settings": {
+                "data": {
+                    "projection": "https://demo.humany.net/v4-bot-projection"
                 },
-                "colors": {
-                  "accent": "#FFFFFF",
-                  "link": "#990AE3",
-                  "primary": "#990AE3",
-                  "text": "#333333",
-                  "warning": "#CC0000"
+                "language": "en",
+                "entry": [
+                    "root-area",
+                    {
+                        "breakpoints": ["tablet", "desktop"],
+                        "properties": {
+                            "css-width": "380px",
+                            "css-height": "656px",
+                            "css-bottom": "95px",
+                            "css-right": "20px",
+                            "css-top": "auto",
+                            "css-left": "auto",
+                            "css-box-shadow": "rgba(0, 0, 0, 0.16) 0px 5px 40px",
+                            "css-border-radius": "10px",
+                            "css-max-height": "calc(100% - 120px)"
+                        }
+                    }
+                ],
+                "components": {
+                    "root-area": {
+                        "type": "area",
+                        "children": [
+                            [
+                                "widget-header",
+                                {
+                                    "breakpoints": ["tablet", "desktop"],
+                                    "properties": {
+                                        "css-border-radius": "10px 10px 0 0",
+                                        "actions": {
+                                            "minimize": null
+                                        }
+                                    }
+                                }
+                            ],
+                            [
+                                "view",
+                                {
+                                    "properties": {
+                                        "css-overflow-y": "auto",
+                                        "css-height": "100%",
+                                        "css-flex": 1,
+                                        "animation": "slide"
+                                    },
+                                    "context": {
+                                        "gap": "25px",
+                                        "border": "1px solid #E7E7E7",
+                                        "borderRadius": "5px"
+                                    }
+                                }
+                            ],
+                            [
+                                "copyright",
+                                {
+                                    "breakpoints": ["tablet", "desktop"],
+                                    "properties": {
+                                        "css-border-radius": "0 0 10px 10px"
+                                    }
+                                }
+                            ]
+                        ],
+                        "context": {
+                            "cardinal": 3,
+                            "fonts": {
+                                "type": "Lato",
+                                "huge": "1.25em",
+                                "medium": "1.1em",
+                                "large": "1.1em"
+                            },
+                            "colors": {
+                                "accent": "#FAFAFA",
+                                "link": "#990AE3",
+                                "primary": "#990AE3",
+                                "warning": "#CC0000",
+                                "text": "#333333",
+                                "textLight": "#767676"
+                            },
+                            "accessibility": {
+                                "border": "2px dashed #990AE3",
+                                "colors": {
+                                    "inactiveText": "#990AE3",
+                                    "activeText": "#FFFFFF"
+                                }
+                            },
+                            "inputBorder": "1px solid #000000"
+                        },
+                        "properties": {
+                            "animation": "slide-up",
+                            "css-display": "flex",
+                            "css-flex-direction": "column",
+                            "css-position": "fixed",
+                            "css-top": "0",
+                            "css-bottom": "0",
+                            "css-right": "0",
+                            "css-left": "0",
+                            "css-height": "100%",
+                            "css-background-color": "#FAFAFA",
+                            "css-z-index": 6,
+                            "css-overflow": "hidden"
+                        }
+                    },
+                    "view-area": {
+                        "type": "area",
+                        "children": [
+                            [
+                                "view",
+                                {
+                                    "context": {
+                                        "gap": "15px"
+                                    },
+                                    "properties": {
+                                        "animation": "slide",
+                                        "css-padding": "15px"
+                                    }
+                                }
+                            ]
+                        ],
+                        "properties": {
+                            "css-flex": 1,
+                            "scrollable": true
+                        },
+                        "context": {
+                            "borderRadius": "5px",
+                            "border": "1px solid #E7E7E7",
+                            "boxShadow": "0px 0px 10px rgba(0, 0, 0, 0.1)"
+                        }
+                    },
+                    "widget-header": {
+                        "type": "widget-header",
+                        "properties": {
+                            "actions": {
+                                "minimize": {
+                                    "position": "right",
+                                    "size": "20px",
+                                    "padding": "25px",
+                                    "order": -1,
+                                    "tooltip": "Minimize chat"
+                                },
+                                "avatar": {
+                                    "position": "left",
+                                    "size": "34px",
+                                    "padding": "15px",
+                                    "symbol": {
+                                        "type": "Svg",
+                                        "content": "chat"
+                                    }
+                                }
+                            },
+                            "textAlign": "left",
+                            "css-background-color": "#990AE3",
+                            "css-height": "85px",
+                            "header": "Chat",
+                            "tooltip": "Back to start"
+                        },
+                        "context": {
+                            "colors": {
+                                "text": "#FFFFFF"
+                            },
+                            "accessibility": {
+                                "border": "2px dashed #FFFFFF",
+                                "colors": {
+                                    "inactiveText": "#FFFFFF"
+                                }
+                            }
+                        }
+                    },
+                    "conversation": {
+                        "type": "conversation",
+                        "properties": {
+                            "inputHidden": false,
+                            "inputDisabled": false,
+                            "inputPlaceholder": "Type your message here...",
+                            "sendButtonLabel": "Send message",
+                            "userLabel": "Me",
+                            "providers": ["chat.bot"]
+                        },
+                        "context": {
+                            "fonts": {
+                                "small": "0.9em"
+                            },
+                            "colors": {
+                                "accent": "#FFF"
+                            },
+                            "inputBorder": "1px solid #EFEFEF"
+                        }
+                    },
+                    "copyright": {
+                        "type": "copyright",
+                        "properties": {
+                            "mode": "compact",
+                            "css-background-color": "#FFFFFF",
+                            "css-box-shadow": "1px 0px 10px rgba(0, 0, 0, 0.1)",
+                            "css-z-index": 6
+                        }
+                    }
                 },
-                "borderRadius": "10px",
-                "inputBorder": "1px solid #767676"
-              }
-            },
-            "conversation": {
-              "type": "conversation",
-              "properties": {
-                "inputHidden": false,
-                "inputDisabled": false,
-                "inputPlaceholder": "Write your message here...",
-                "sendButtonLabel": "Submit message",
-                "providers": ["chat.bot"],
-                "css-position": "static",
-                "css-flex": "1"
-              }
+                "views": {
+                    "index": {
+                        "path": "/",
+                        "entry": "conversation"
+                    }
+                },
+                "routing": {
+                    "initialPath": "/",
+                    "mode": "memory"
+                },
+                "breakpoints": {
+                    "desktop": "screen and (min-width: 1200px)",
+                    "tablet": "screen and (max-width: 1199px) and (min-width: 768px)",
+                    "mobile": "screen and (max-width: 767px) and (min-width: 440px)",
+                    "mobile-small": "screen and (max-width: 439px)"
+                },
+                "trigger": {
+                    "symbol": {
+                        "type": "FontAwesome",
+                        "content": "comment"
+                    },
+                    "openTooltip": "Minimze",
+                    "closedTooltip": "Open",
+                    "ariaLabel": "Contact and help"
+                }
             }
-          }
         }
-      }
     }
-  }
-  
+}
